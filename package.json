@@ -23,7 +23,8 @@
     "test": "./node_modules/.bin/mocha --harmony-proxies --compilers js:babel-core/register",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/mocha -- --harmony-proxies --compilers js:babel-core/register -R spec",
     "clean": "rm -rf node_modules coverage",
-    "dev": "./node_modules/.bin/watch --wait 1 'npm test' test"
+    "dev": "./node_modules/.bin/watch --wait 1 'npm test' test",
+    "examples": "for f in examples/Dckrefile.*; do ./dckre $f > $f.docker; done"
   },
   "repository": {
     "type": "git",
@@ -50,7 +51,7 @@
   },
   "dependencies": {
     "bluebird": "^3.3.3",
-    "dckre-node": "git+ssh://git@github.com/dckre/dckre-node.git",
+    "dckre-node": "https://github.com/dckre/dckre-node.git",
     "fs-extra-promise": "^0.3.1",
     "fs-promise": "^0.5.0"
   }
