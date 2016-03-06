@@ -1,0 +1,57 @@
+{
+  "name": "dckre",
+  "version": "0.0.1",
+  "description": "Dckre is a preprocessor for Dockerfiles – enabling sick stuff like recursive INCLUDEs",
+  "keywords": [
+    "dockerfile",
+    "docker",
+    "parser",
+    "preprocessor"
+  ],
+  "homepage": "https://github.com/dckre/dckre",
+  "bugs": {
+    "url": "https://github.com/dckre/dckre/issues"
+  },
+  "license": "MIT",
+  "author": "Maik Hummel <m@ikhummel.com>",
+  "main": "dckre",
+  "bin": "dckre",
+  "scripts": {
+    "test_old": "set -e; for t in test/test_*.js; do node $t | ./node_modules/.bin/colortape; done",
+    "init": "npm i",
+    "start": "node lib/dckre.js",
+    "test": "./node_modules/.bin/mocha --harmony-proxies --compilers js:babel-core/register",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/mocha -- --harmony-proxies --compilers js:babel-core/register -R spec",
+    "clean": "rm -rf node_modules coverage",
+    "dev": "./node_modules/.bin/watch --wait 1 'npm test' test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dckre/dckre.git"
+  },
+  "babel": {
+    "plugins": [
+      "transform-async-to-generator",
+      "transform-es2015-destructuring",
+      "transform-es2015-parameters"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.6.5",
+    "babel-plugin-transform-async-to-generator": "^6.5.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.6.5",
+    "babel-plugin-transform-es2015-parameters": "^6.6.5",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.2.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "standard": "^6.0.7",
+    "watch": "^0.17.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.3.3",
+    "dckre-node": "git+ssh://git@github.com/dckre/dckre-node.git",
+    "fs-extra-promise": "^0.3.1",
+    "fs-promise": "^0.5.0"
+  }
+}

@@ -1,0 +1,8 @@
+FROM beevelop/base
+
+MAINTAINER Maik Hummel <m@ikhummel.com>
+
+INC_ENV NODE_VERSION="5.7.1" \
+        NPM_CONFIG_LOGLEVEL="verbose"
+
+INCLUDE node

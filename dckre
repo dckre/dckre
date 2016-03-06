@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+const Dckre = require('./lib/dckre')
+
+new Dckre(process.argv[2])
