@@ -43,16 +43,16 @@
     "babel-plugin-transform-es2015-destructuring": "^6.6.5",
     "babel-plugin-transform-es2015-parameters": "^6.6.5",
     "chai": "^3.5.0",
-    "chai-as-promised": "^5.2.0",
+    "chai-as-promised": "^6.0.0",
     "istanbul": "^0.4.2",
-    "mocha": "^2.4.5",
-    "standard": "^6.0.7",
-    "watch": "^0.17.1"
+    "mocha": "^3.1.2",
+    "standard": "^8.5.0",
+    "watch": "^1.0.1"
   },
   "dependencies": {
     "bluebird": "^3.3.3",
     "dckre-node": "https://github.com/dckre/dckre-node.git",
-    "fs-extra-promise": "^0.3.1",
+    "fs-extra-promise": "^0.4.1",
     "fs-promise": "^0.5.0"
   }
 }
