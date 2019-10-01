@@ -50,7 +50,7 @@
     "watch": "^1.0.1"
   },
   "dependencies": {
-    "bluebird": "^3.3.3",
+    "bluebird": "^3.6.0",
     "dckre-node": "https://github.com/dckre/dckre-node.git",
     "fs-extra-promise": "^0.4.1",
     "fs-promise": "^2.0.1"
